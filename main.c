@@ -10,6 +10,7 @@ int main(int ac, char **argv)
 
     char *lineptr;
     size_t n = 0;
+    ssize_t n_char;
     /* declaring void var */
     (void)ac; (void)argv;
 
