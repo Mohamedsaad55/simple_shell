@@ -13,9 +13,12 @@ int main(int ac, char **argv)
     /* declaring void variables */
     (void)ac; (void)argv;
 
-    printf("%s", prompt);
-    getline(&lineptr, &n, stdin);
+   while(1){
+	   printf("%s",prompt);
+	   getline(&lineptr,&n,stdin);
+	   printf("%s/n",lineptr);
 
-    free(lineptr);
-    return (0);
+	   /*free up allocated memory*/
+	   free(lineptr);}
+   return(0);
 }
