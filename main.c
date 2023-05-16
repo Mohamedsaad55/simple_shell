@@ -7,7 +7,7 @@
 int main(int ac, char **argv)
 {
 		char *prompt = "(VerySshell) $ ";
-		char *lineptr;
+		char *lptr;
 		size_t n = 0;
 		ssize_t n_char;
 
@@ -17,15 +17,15 @@ int main(int ac, char **argv)
 		while(1)
 		{
 			printf("%s",prompt);
-			getline(&lineptr,&n,stdin);
+			getline(&lptr,&n,stdin);
 			if (n_char==-1){
 				printf("See You Later..../n");
 				return (-1);
 			}
-			printf("%s/n",lineptr);
+			printf("%s/n",lptr);
 
 		/*free up allocated memory*/
-			free(lineptr);
+			free(lptr);
 		}
 
 	return(0);
