@@ -18,6 +18,10 @@ int main(int ac, char **argv)
 		{
 			printf("%s",prompt);
 			getline(&lineptr,&n,stdin);
+			if (n_char==-1){
+				printf("See You Later..../n");
+				return (-1);
+			}
 			printf("%s/n",lineptr);
 
 		/*free up allocated memory*/
