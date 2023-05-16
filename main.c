@@ -4,7 +4,7 @@
  * test
 */
 
-int main(int ac, char **argv)
+int main(int ac, char **av)
 {
 		char *prompt = "(VerySshell) $ ";
 		char *lptr;
@@ -12,7 +12,7 @@ int main(int ac, char **argv)
 		ssize_t n_char;
 
 		/* declaring void var */
-		(void)ac; (void)argv;
+		(void)ac; (void)av;
 
 		while(1)
 		{
