@@ -7,5 +7,20 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+#define TOKEN_BUFF_S 64
+#define TOKEN_DELI " \t\r\n\a"
+
+typedef struct builtins
+{
+	char *arg;
+	void (*builtin)(char **args, char *line, char **env);
+} builtin_list;
+
+
+char *gline(void);
+char **s_line(char *l)
+int c_builtin (char **arg, char *li, char **env)
+
+
 
 #endif
