@@ -11,15 +11,15 @@
 int c_builtin (char **arg, char *li, char **env)
 {
 	builtin_list list[] = {
-		{"exit",exit_shell},
-		{"env",env_shell},
+		{"exit",exit_s},
+		{"env",env_s},
 		{NULL,NULL}
 	};
 	int i;
 
 	for(i = 0; list[i].arg !=NULL; i++)
 	{
-		if(str_compare(list[i].arg, arg[0]) == 0)
+		if(_str_compare(list[i].arg, arg[0]) == 0)
 		{
 			list[i].builtin(arg, li, env);
 			return(1);

@@ -13,14 +13,15 @@
 typedef struct builtins
 {
 	char *arg;
-	void (*builtin)(char **args, char *line, char **env);
+	void (*builtin)(char **arg, char *li, char **env);
 } builtin_list;
 
 
 char *gline(void);
-char **s_line(char *l)
-int c_builtin (char **arg, char *li, char **env)
-
+char **s_line(char *li);
+int c_builtin (char **arg, char *li, char **env);
+void exit_s(char **arg, char *li, char **env);
+void env_s(char **arg, char *li, char **env); 
 
 
 #endif

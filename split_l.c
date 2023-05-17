@@ -6,7 +6,7 @@
  * Return : Arr of arguments 
 */
 
-char **s_line(char *l)
+char **s_line(char *li)
 {
 	size_t buf_s = TOKEN_BUFF_S ;
 	char **tkns = malloc(sizeof(char *) * buf_s);
@@ -19,7 +19,7 @@ char **s_line(char *l)
 		exit(0);
 	}
 
-	tkn = strtok(l , TOKEN_DELI);
+	tkn = strtok(li , TOKEN_DELI);
 
 	while (tkn != NULL)
 	{
