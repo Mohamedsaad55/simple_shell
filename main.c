@@ -18,7 +18,8 @@ int main(int ac, char **av)
 		{
 			printf("%s",prompt);
 			getline(&lptr,&n,stdin);
-			if (n_char==-1){
+			if (n_char==-1)
+			{
 				printf("See You Later..../n");
 				return (-1);
 			}
