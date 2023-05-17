@@ -1,10 +1,12 @@
 #include "shell.h"
+
 /**
  * _str_compare - Compares two strings 
- * @str1: first sting 
- * @str2: second string 
- * Return: Difference between s1 & s2
+ * @str1 
+ * @str2 
+ * Return: Difference between str1 & str2
  * */
+
 int _str_compare(char *str1, char *str2)
 {
 	int i = 0;
