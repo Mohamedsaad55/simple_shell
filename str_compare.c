@@ -5,7 +5,7 @@
  *@str1
  *@str2 
  *Return: Difference between str1 & str2
- * */
+ */
 int _str_compare(char *str1, char *str2)
 {
 	int i = 0;
