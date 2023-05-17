@@ -23,5 +23,6 @@ int c_builtin (char **arg, char *li, char **env);
 void exit_s(char **arg, char *li, char **env);
 void env_s(char **arg, char *li, char **env); 
 int _str_compare(char str1, char str2);
+int p_launch(char **arg)
 
 #endif
