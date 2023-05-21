@@ -27,3 +27,26 @@ int c_builtin (char **arg, char *li, char **env)
 	}
 	return(0);
 }
+
+/**
+ * builtins_checker - Checks for builtins
+ * arg: Arguments passed from prompt
+ * Return: 1 if builtins exist, 0 if they don't
+ */
+
+int builtins_ch(char **arg)
+{
+	int i;
+	builtin_list list[] = {
+		{"exit", exit_s},
+		{"env", env_s},
+		{NULL, NULL}
+	};
+
+	for (i = 0; list[i].arg != NULL; i++)
+	{
+		if (_str_compare(list[i].arg, arg[0]) == 0)
+			return (1);
+	}
+	return (0);
+}

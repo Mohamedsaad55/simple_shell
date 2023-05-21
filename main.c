@@ -15,6 +15,6 @@ int main(int ac, char **av, char **env){
 		(void)av;
 	if(!env)
 		(void)env;
-	shell(ac, av,env);
+	sshell(ac, av,env);
 	return (0);
 }

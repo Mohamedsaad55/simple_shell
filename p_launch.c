@@ -7,11 +7,11 @@
 
 int p_launch(char **arg)
 {
-	pid_t process_id , wait_id;
+	pid_t p_id , w_id;
 	int stts ;
 
-	process_id = fork();
-	if(process_id == 0)
+	p_id = fork();
+	if(p_id == 0)
 	{
 		if (execve(arg[0],arg,NULL) == -1)
 		{
@@ -20,7 +20,7 @@ int p_launch(char **arg)
 
 		}
 	}
-	else if (process_id < 0)
+	else if (p_id < 0)
 	{
 		perror("Failed to use Fork\n");
 		exit(0);
@@ -28,10 +28,10 @@ int p_launch(char **arg)
 	else
 	{
 		do {
-			wait_id = waitpid(process_id, &stts, WUNTRACED );
+			w_id = waitpid(p_id, &stts, WUNTRACED );
 		} 
 		while (!WIFEXITED(stts) && WIFSIGNALED(stts));
 	}
-	(void)wait_id;
+	(void)w_id;
 	return (1);
 }

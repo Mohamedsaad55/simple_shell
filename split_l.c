@@ -10,7 +10,7 @@ char **s_line(char *li)
 {
 	size_t buf_s = TOKEN_BUFF_S ;
 	char **tkns = malloc(sizeof(char *) * buf_s);
-	char **tkn ;
+	char *tkn ;
 	int position =0;
 
 	if (tkns == NULL)
