@@ -40,7 +40,7 @@ char *save_path(char *tmp, char *path);
 int b(char *check, char **arg);
 int strr_len(char *s);
 int builtins_ch(char **arg);
-char *find_cd(char *filename, char *er);
+char *find_cd(char *file_name, char *er);
 int p_launch(char **arg);
 void sshell(int ac, char **av, char **env);
 int exe_prog(char **arg, char *li, char **env, int flow);

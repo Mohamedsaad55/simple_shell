@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
- * search_cwd - look for current working dir
- * @filename: file name
+ * search_cd - look for current working dir
+ * filename: file name
  * Return: current working dir
  */
-char *find_cd(char *filename, char *er)
+char *find_cd(char *file_name, char *er)
 {
 	DIR *dir;
 	struct dirent *sd;
@@ -12,7 +12,7 @@ char *find_cd(char *filename, char *er)
 	int len = 0;
 	int i = 0;
 
-	while (filename[len])
+	while (file_name[len])
 		len++;
 	ret = malloc(sizeof(char) * (len + 3));
 	dir = opendir(".");
@@ -23,14 +23,14 @@ char *find_cd(char *filename, char *er)
 	}
 	while ((sd = readdir(dir)))
 	{
-		for (i = 0; sd->d_name[i] && filename[i]; i++)
+		for (i = 0; sd->d_name[i] && file_name[i]; i++)
 		{
-			if (sd->d_name[i] != filename[i])
+			if (sd->d_name[i] != file_name[i])
 				break;
 			if (i == (len - 1) && !(sd->d_name[i + 1]))
 			{
 				strcpy(ret, "./");
-				strcat(ret, filename);
+				strcat(ret, file_name);
 				closedir(dir);
 				if (!(access(ret, X_OK)))
 					return (ret);
