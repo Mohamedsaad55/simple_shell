@@ -5,7 +5,7 @@
  *@arg: Arguments Captured from the user
  *@li: line buffer
  *@env: Enviroment
- *Return : 1 if exists else : 0
+ *Return: 1 if exists else : 0
  */
 
 int c_builtin(char **arg, char *li, char **env)
@@ -29,8 +29,8 @@ int c_builtin(char **arg, char *li, char **env)
 }
 
 /**
- * builtins_checker - Checks for builtins
- * arg: Arguments passed from prompt
+ * builtins_ch - Checks for builtins
+ * @arg: Arguments passed from prompt
  * Return: 1 if builtins exist, 0 if they don't
  */
 

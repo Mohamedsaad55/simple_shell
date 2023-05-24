@@ -3,8 +3,9 @@
 /**
  *env_s - Shell enviroment
  *@arg: args from input
+ *@li: line 
  *@env: Enviroment
-*/
+ */
 
 void env_s(char **arg, char *li, char **env)
 {
