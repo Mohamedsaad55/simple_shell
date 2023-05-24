@@ -3,7 +3,7 @@
 /**
  *env_s - Shell enviroment
  *@arg: args from input
- *@li: line 
+ *@li: line
  *@env: Enviroment
  */
 

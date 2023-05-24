@@ -14,13 +14,11 @@
 #include <sys/wait.h>
 #include <errno.h>
 #include <sys/types.h>
-// Token buffer
 #define TOKEN_BUFF_S 64
 #define TOKEN_DELI " \t\r\n\a"
 #define LINE_SIZE 1024
 
 extern char **environ;
-// Struct builtin 
 typedef struct builtins
 {
 	char *arg;
