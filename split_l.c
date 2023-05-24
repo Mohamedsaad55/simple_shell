@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * s_line - split the line into arguments
- * @l: the line
- * Return: Arr of arguments
+ *s_line - split the line into arguments
+ *@li: the line
+ *Return: Arr of arguments
  */
 
 char **s_line(char *li)

@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
-*c_builtin - Checks for Builtin commands
-*@arg: Arguments Captured from the user
-*@li: line buffer
-*@env: Enviroment
-*Return : 1 if exists else : 0
+ *c_builtin - Checks for Builtin commands
+ *@arg: Arguments Captured from the user
+ *@li: line buffer
+ *@env: Enviroment
+ *Return : 1 if exists else : 0
 */
 
 int c_builtin(char **arg, char *li, char **env)
