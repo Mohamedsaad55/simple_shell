@@ -2,7 +2,7 @@
 /**
  *p_launch - Forks and launches the Program
  *@arg : arguments
- *Return 1 on success
+ *Return: 1 on success
  */
 int p_launch(char **arg)
 {

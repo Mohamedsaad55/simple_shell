@@ -26,7 +26,7 @@ void sshell(int ac, char **av, char **env)
 			arg[0] = f_path(arg[0], tmp, er);
 			if (arg[0] == er)
 			{
-					perror(er);
+				perror(er);
 			}
 		}
 		if (arg[0] != er)
