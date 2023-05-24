@@ -35,7 +35,6 @@ char *find_cd(char *file_name, char *er)
 				closedir(dir);
 				if (!(access(ret, X_OK)))
 					return (ret);
-				else
 					write(2, er, 5);
 			}
 		}

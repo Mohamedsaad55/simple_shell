@@ -2,7 +2,7 @@
 
 /**
  *gline - Get the line from user input
- *Return : Ptr to buffer user input
+ *Return: lptr to buffer user input
  */
 
 char *gline(void)
