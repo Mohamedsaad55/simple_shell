@@ -1,9 +1,9 @@
 #include "shell.h"
 /**
- * find_cd - look for current working dir
- * @filename: file name
- * @er: Error
- * Return: current working dir
+ *find_cd - look for current working dir
+ *@file_name: file name
+ *@er: Error
+ *Return: current working dir
  */
 char *find_cd(char *file_name, char *er)
 {

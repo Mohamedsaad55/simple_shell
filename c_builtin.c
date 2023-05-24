@@ -6,7 +6,7 @@
  *@li: line buffer
  *@env: Enviroment
  *Return : 1 if exists else : 0
-*/
+ */
 
 int c_builtin(char **arg, char *li, char **env)
 {

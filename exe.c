@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- *execute_prog - Executes builtin
+ *exe_prog - Executes builtin
  *@arg: Argument
  *@li: Line buffer
  *@env: Environment

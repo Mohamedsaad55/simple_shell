@@ -25,5 +25,5 @@ char *sub_str(char *x, char *x2)
 	}
 
 	return (NULL);
-	
+
 }
