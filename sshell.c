@@ -13,7 +13,6 @@ void sshell(int ac, char **av, char **env)
 	int status = 1;
 	char *tmp = NULL;
 	char *er;
-	char *filename;
 	int flow;
 
 	er = "Error";
@@ -24,13 +23,10 @@ void sshell(int ac, char **av, char **env)
 		flow = b(arg[0], arg);
 		if (flow == 2)
 		{
-			filename = arg[0];
 			arg[0] = f_path(arg[0], tmp, er);
 			if (arg[0] == er)
 			{
-				arg[0] = find_cd(filename, er);
-				if (arg[0] == filename)
-					write(1, er, 5);
+					perror(er);
 			}
 		}
 		if (arg[0] != er)
