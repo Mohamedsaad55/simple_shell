@@ -19,7 +19,7 @@ char *find_cd(char *file_name, char *er)
 	dir = opendir(".");
 	if (!dir)
 	{
-		printf("Error! Unable to open directory.\n");
+		perror("Error! Unable to open directory.\n");
 		exit(0);
 	}
 	while ((sd = readdir(dir)))
@@ -35,7 +35,7 @@ char *find_cd(char *file_name, char *er)
 				closedir(dir);
 				if (!(access(ret, X_OK)))
 					return (ret);
-					write(2, er, 5);
+				perror(er);
 			}
 		}
 	}

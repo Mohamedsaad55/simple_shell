@@ -9,7 +9,7 @@ void promptt(void)
 {
 	if (isatty(STDIN_FILENO))
 	{
-		write(1, "Simple Shell $ ", 2);
+		write(1, "$ ", 3);
 	}
 
 }
