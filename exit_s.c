@@ -2,8 +2,8 @@
 
 /**
  * exit_s : Runs the exit builtin
- * li : buffor for the line 
- * arg : args from the input 
+ * li : buffor for the line
+ * arg : args from the input
  * env : enviroment
  * Returns Void
 */

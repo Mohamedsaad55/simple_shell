@@ -11,4 +11,5 @@ void promptt(void)
 	{
 		write(1, "$ ", 2);
 	}
+
 }

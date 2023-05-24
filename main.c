@@ -1,21 +1,21 @@
 #include "shell.h"
 
 /**
- * main - handles the arguments passed 
+ * main - handles the arguments passed
  * ac: Arguments count
  * av: Arr of arguments
- * env: Enviroment 
+ * env: Enviroment
  * Return: 0;
  */
 
 int main(int ac, char **av, char **env)
 {
-	if(!ac)
+	if (!ac)
 		(void)ac;
-	if(!av)
+	if (!av)
 		(void)av;
-	if(!env)
+	if (!env)
 		(void)env;
-	sshell(ac, av,env);
+	sshell(ac, av, env);
 	return (0);
 }

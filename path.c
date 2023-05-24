@@ -46,7 +46,7 @@ char *f_path(char *file_name, char *tmp, char *er)
 }
 
 /**
- *r_dir - opens and reads directory file names 
+ *r_dir - opens and reads directory file names
  *er: error message
  *s: struct containing info about a files in a directory
  *f: name of file being searched for
@@ -108,5 +108,7 @@ char *save_path(char *tmp, char *path)
 		i = 0;
 		return (path);
 	}
+
 	return ("error");
+
 }

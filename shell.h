@@ -28,7 +28,7 @@ typedef struct builtins
 void promptt(void);
 char *gline(void);
 char **s_line(char *li);
-int c_builtin (char **arg, char *li, char **env);
+int c_builtin(char **arg, char *li, char **env);
 void exit_s(char **arg, char *li, char **env);
 void env_s(char **arg, char *li, char **env);
 char *get_env(char *env);
