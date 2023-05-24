@@ -2,8 +2,8 @@
 
 /**
  * sub_str - locates sub string
- * x: input one
- * x2: input two
+ * @x: input one
+ * @x2: input two
  * Return: sub string
  */
 
@@ -25,4 +25,5 @@ char *sub_str(char *x, char *x2)
 	}
 
 	return (NULL);
+	
 }

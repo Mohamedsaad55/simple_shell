@@ -1,4 +1,7 @@
 {
     "C_Cpp.default.compilerPath": "/root/simple_shell/SS_practice/main.h",
-    "editor.insertSpaces": false
+	"editor.insertSpaces": false,
+	"files.associations": {
+		"shell.h": "c"
+	}
 }

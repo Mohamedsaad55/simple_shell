@@ -1,7 +1,7 @@
 #include "shell.h"
  /**
-  * p_launch : Forks and launches the Program
-  * arg : arguments
+  * p_launch - Forks and launches the Program
+  * @arg : arguments
   * Return 1 on success
  */
 
@@ -29,7 +29,7 @@ int p_launch(char **arg)
 	{
 		do {
 			w_id = waitpid(p_id, &stts, WUNTRACED);
-		}while (!WIFEXITED(stts) && WIFSIGNALED(stts));
+		} while (!WIFEXITED(stts) && WIFSIGNALED(stts));
 	}
 	(void)w_id;
 	return (1);

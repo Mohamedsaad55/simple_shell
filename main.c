@@ -2,9 +2,9 @@
 
 /**
  * main - handles the arguments passed
- * ac: Arguments count
- * av: Arr of arguments
- * env: Enviroment
+ * @ac: Arguments count
+ * @av: Arr of arguments
+ * @env: Enviroment
  * Return: 0;
  */
 

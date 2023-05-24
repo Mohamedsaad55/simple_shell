@@ -2,7 +2,7 @@
 
 /**
  * get_env - gets enviroment of input
- * env: inputs
+ *@env: inputs
  * Return: env without =
  */
 

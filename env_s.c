@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * env_s : Shell enviroment
- * arg : args from input
- * env : Enviroment
+ *env_s - Shell enviroment
+ *@arg: args from input
+ *@env: Enviroment
 */
 
 void env_s(char **arg, char *li, char **env)

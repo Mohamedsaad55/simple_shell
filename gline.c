@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * gline - Get the line from user input
- * Return : Ptr to buffer user input
-*/
+ *gline - Get the line from user input
+ *Return : Ptr to buffer user input
+ */
 
 char *gline(void)
 {
@@ -11,7 +11,7 @@ char *gline(void)
 	char *lptr = NULL;
 	size_t n = 0;
 
-	tmp = getline (&lptr, &n, stdin);
+	tmp = getline(&lptr, &n, stdin);
 	if (tmp == EOF)
 	{
 		if (isatty(STDIN_FILENO))

@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- *__str_compare - Compares two strings 
- *@str1
- *@str2 
+ *_str_compare - Compares two strings
+ *@str1: string 1
+ *@str2: string 2
  *Return: Difference between str1 & str2
  */
 int _str_compare(char *str1, char *str2)

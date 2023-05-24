@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
- * f_path - find path
- * file_name: file name
- * tmp: saves the PATH string
- * er: an error message
- * Return: Success - path/filename, fail : error
+ *f_path - find path
+ *@file_name: file name
+ *@tmp: saves the PATH string
+ *@er: an error message
+ *Return: Success - path/filename, fail : error
  */
 
 char *f_path(char *file_name, char *tmp, char *er)
@@ -47,12 +47,12 @@ char *f_path(char *file_name, char *tmp, char *er)
 
 /**
  *r_dir - opens and reads directory file names
- *er: error message
- *s: struct containing info about a files in a directory
- *f: name of file being searched for
- *fp: directory being searched through
- *t: string containing the PATH variable's value
- *l: length of filename
+ *@er: error message
+ *@s: struct containing info about a files in a directory
+ *@f: name of file being searched for
+ *@fp: directory being searched through
+ *@t: string containing the PATH variable's value
+ *@l: length of filename
  *Return: success - path , fail error
  */
 char *r_dir(char *er, struct dirent *s, char *f, int l, char *fp, char *t)
@@ -76,9 +76,8 @@ char *r_dir(char *er, struct dirent *s, char *f, int l, char *fp, char *t)
 }
 /**
  *save_path - saves a copy of the PATH string
- *tmp: copy to be made of PATH
- *path: string containing original PATH value
- *
+ *@tmp: copy to be made of PATH
+ *@path: string containing original PATH value
  *Return: success - tmp first time, path every other time, else error
  */
 char *save_path(char *tmp, char *path)

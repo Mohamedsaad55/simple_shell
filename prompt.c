@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * prompt - prints $ for prompt
+ * promptt - prints $ for prompt
  * Return: void
  */
 
@@ -9,7 +9,7 @@ void promptt(void)
 {
 	if (isatty(STDIN_FILENO))
 	{
-		write(1, "$ ", 2);
+		write(1, "Simple Shell $ ", 2);
 	}
 
 }

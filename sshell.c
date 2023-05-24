@@ -1,9 +1,9 @@
 #include "shell.h"
 /**
  * sshell - Infinite loop that runs simple shell
- * ac: Arg count
- * av: args passed to shell at beginning of prog
- * env: Environment
+ * @ac: Arg count
+ * @av: args passed to shell at beginning of prog
+ * @env: Environment
  * Return: Void
  */
 void sshell(int ac, char **av, char **env)

@@ -2,7 +2,7 @@
 
 /**
  * strr_len - a function that returns the length of a string
- * s: char input
+ * @s: char input
  * Return: length of the input string
  */
 int strr_len(char *s)
