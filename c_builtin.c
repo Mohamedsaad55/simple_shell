@@ -1,31 +1,31 @@
 #include "shell.h"
 
 /**
- * c_builtin.c : Checks for Builtin commands
- * arg : Arguments Captured from the user 
- * li : line buffer
- * env : Enviroment
- * Return : 1 if exists else : 0
+* c_builtin : Checks for Builtin commands
+* arg : Arguments Captured from the user 
+* li : line buffer
+* env : Enviroment
+* Return : 1 if exists else : 0
 */
 
-int c_builtin (char **arg, char *li, char **env)
+int c_builtin(char **arg, char *li, char **env)
 {
 	builtin_list list[] = {
-		{"exit",exit_s},
-		{"env",env_s},
-		{NULL,NULL}
+		{"exit", exit_s},
+		{"env", env_s},
+		{NULL, NULL}
 	};
 	int i;
 
-	for(i = 0; list[i].arg !=NULL; i++)
+	for (i = 0; list[i].arg != NULL; i++)
 	{
-		if(_str_compare(list[i].arg, arg[0]) == 0)
+		if (_str_compare(list[i].arg, arg[0]) == 0)
 		{
 			list[i].builtin(arg, li, env);
-			return(1);
+			return (1);
 		}
 	}
-	return(0);
+	return (0);
 }
 
 /**
@@ -49,4 +49,5 @@ int builtins_ch(char **arg)
 			return (1);
 	}
 	return (0);
+
 }
