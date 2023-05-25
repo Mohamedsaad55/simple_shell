@@ -82,32 +82,26 @@ char *r_dir(char *er, struct dirent *s, char *f, int l, char *fp, char *t)
  */
 char *save_path(char *tmp, char *path)
 {
-	int i = 0;
+	size_t len = 0;
+	const char *ptr =path;
 
-	if (!tmp)
+	while (*ptr != '\0')
 	{
-		tmp = malloc(sizeof(char) * 100);
-		while (path[i])
-		{
-			tmp[i] = path[i];
-			i++;
-			tmp[i] = '\0';
-		}
-		i = 0;
-		return (tmp);
+		len++;
+		ptr++;
+	}
+
+	if (tmp == NULL)
+	{
+		tmp = malloc(len+1);
+		strcpy(tmp,path);
 	}
 	else
 	{
-		while (tmp[i])
-		{
-			path[i] = tmp[i];
-			i++;
-			path[i] = '\0';
-		}
-		i = 0;
-		return (path);
+		size_t new_size = len+1;
+		tmp = realloc(tmp, new_size);
+		strcpy(tmp, path);
 	}
-
-	return ("error");
+	return tmp;
 
 }
