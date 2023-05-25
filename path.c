@@ -66,8 +66,15 @@ char *r_dir(char *er, struct dirent *s, char *f, int l, char *fp, char *t)
 			break;
 		if (i == (l - 1) && !(s->d_name[i + 1]))
 		{
-			ret = strcat(fp, "/");
-			ret = strcat(ret, f);
+			ret = malloc(strr_len(fp) + 1 + strr_len(f) + 1);
+			if (ret == NULL)
+			{
+				perror("Error allocating memory");
+				return (er);
+			}
+			_strcpy(ret, fp);
+			_strcat(ret, "/");
+			_strcat(ret, f);
 			free(t);
 			return (ret);
 		}
@@ -82,26 +89,27 @@ char *r_dir(char *er, struct dirent *s, char *f, int l, char *fp, char *t)
  */
 char *save_path(char *tmp, char *path)
 {
-	size_t len = 0;
-	const char *ptr =path;
-
-	while (*ptr != '\0')
-	{
-		len++;
-		ptr++;
-	}
-
 	if (tmp == NULL)
 	{
-		tmp = malloc(len+1);
-		strcpy(tmp,path);
+		tmp = malloc(strr_len(path)+1);
+		if (tmp == NULL)
+		{
+			perror("ERROR allocating memory. \n");
+			return (NULL);
+		}
+		_strcpy(tmp, path);
 	}
 	else
 	{
-		size_t new_size = len+1;
-		tmp = realloc(tmp, new_size);
-		strcpy(tmp, path);
+		free(tmp);
+		tmp = malloc(strr_len(path) + 1);
+		if (tmp == NULL)
+		{
+			perror("ERROR: allocating memory. \n");
+			return (NULL);
+		}
+		_strcpy(tmp, path);
 	}
-	return tmp;
+	return (tmp);
 
 }

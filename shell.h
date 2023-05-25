@@ -44,6 +44,8 @@ char *find_cd(char *file_name, char *er);
 int p_launch(char **arg);
 void sshell(int ac, char **av, char **env);
 int exe_prog(char **arg, char *li, char **env, int flow);
-
+char *_strdup(char *str);
+char *_strcat(char *dest, char *src);
+char *_strcpy(char *dest, char *src);
 
 #endif
